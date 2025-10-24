@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Example</title>
+  <link rel="stylesheet" href="../css/accesslocal.css">
+  <script src="../js/accesslocal.js"></script>
+</head>
+<body>
+  <h1>Form Example with AccessLocal</h1>
+  <form>
+    <label for="name" data-i18n="nameLabel">Name:</label>
+    <input id="name" type="text">
+    <button data-a11y="submit" data-i18n="submit">Submit</button>
+  </form>
+
+  <script>
+    // Load locales (simplified for demo)
+    const locales = {
+      en: { nameLabel: 'Name:', submit: 'Submit' },
+      fr: { nameLabel: 'Nom:', submit: 'Soumettre' }
+    };
+    AccessLocal.init(locales, 'en');
+    AccessLocal.enableA11y();
+  </script>
+</body>
+</html>
