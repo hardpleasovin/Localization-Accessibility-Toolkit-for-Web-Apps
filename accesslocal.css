@@ -1,0 +1,15 @@
+/* AccessLocal A11y Styles */
+.a11y-focus:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* High contrast mode (example) */
+@media (prefers-contrast: high) {
+  body { background: #fff; color: #000; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
